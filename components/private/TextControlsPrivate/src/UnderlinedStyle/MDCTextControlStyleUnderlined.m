@@ -23,9 +23,9 @@
 #import "MDCTextControlVerticalPositioningReferenceUnderlined.h"
 
 static const CGFloat kUnderlinedContainerStyleUnderlineThicknessNormal = 1.0f;
-static const CGFloat kUnderlinedContainerStyleUnderlineThicknessEditing = 2.0f;
+static const CGFloat kUnderlinedContainerStyleUnderlineThicknessEditing = 1.0f;
 
-static const CGFloat kUnderlinedFloatingLabelScaleFactor = 0.75f;
+static const CGFloat kUnderlinedFloatingLabelScaleFactor = 1.0f;
 static const CGFloat kUnderlinedHorizontalEdgePaddingDefault = 2;
 
 @interface MDCTextControlStyleUnderlined () <CAAnimationDelegate>
@@ -176,7 +176,7 @@ static const CGFloat kUnderlinedHorizontalEdgePaddingDefault = 2;
 - (UIFont *)floatingFontWithNormalFont:(UIFont *)font {
   CGFloat scaleFactor = kUnderlinedFloatingLabelScaleFactor;
   CGFloat floatingFontSize = font.pointSize * scaleFactor;
-  return [font fontWithSize:floatingFontSize];
+  return [UIFont fontWithName:@"Brown-Regular" size:10.0];
 }
 
 - (nonnull MDCTextControlHorizontalPositioningReference *)horizontalPositioningReference {
